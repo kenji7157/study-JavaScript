@@ -5,7 +5,7 @@
 - index.html ... 画面遷移の実装
 - next.html ... 画面遷移の実装
 - practice ... npmの利用
-  - index.html
+  - index.js ... momentモジュールの利用
 
 ## 説明で使用する資料
 - no-module ...  モジュールを使わない場合に発生する識別子によるバグを説明
