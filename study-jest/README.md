@@ -52,3 +52,7 @@ All files |   66.67 |      100 |      50 |   66.67 |
 ### coverageレポートの確認
 --coverageオプションをつけて実行したあとに、`coverage/lcov-report`内のindexh.htmlを参照しブラウザでレポートを確認できる。
 各指標の算出式を把握することができる
+
+
+## 参考記事
+https://qiita.com/s_karuta/items/c464f220a4b65f70f214
