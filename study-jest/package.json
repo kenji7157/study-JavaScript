@@ -1,0 +1,16 @@
+{
+  "name": "study-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:nolog": "jest --silent",
+    "test:cov": "jest --coverage"
+  },
+  "author": "Kenji Kawanobe <kawake.kk@gmail.com> (https://github.com/kenji7157)",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
