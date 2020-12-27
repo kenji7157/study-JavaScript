@@ -63,3 +63,4 @@ function greet() {
 
 type Return<T> = T extends (...arg: any[]) => infer U ? U : never;
 type R = Return<typeof greet>
+
