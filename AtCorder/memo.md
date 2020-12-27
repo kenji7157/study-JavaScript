@@ -26,3 +26,31 @@ let [a, b] = [10, 20];
 var ex = /text/g
 var arr = str.match(ex);
 ```
+
+### varとletの違い
+- var：関数スコープのため、関数内で値を更新すると書き換わる
+```js
+function f() {
+  var x = 1;
+  {
+    var x = 2;
+  }
+  // x = 2
+  console.log(x);
+}
+```
+
+- let:ブロックスコープのため、ブロックごとに変数管理できる
+  - ES6から仕様に追加された
+```js
+function f() {
+  let x = 1;
+  {
+    let x = 2;
+  }
+  // x = 1
+  console.log(x);
+}
+```
+
+以上より、letを使った方がバグは起こりづらいので、letが推奨されている。
