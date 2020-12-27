@@ -18,3 +18,11 @@ var min_val = Math.min(...list);
 // aに10,bに20が代入される
 let [a, b] = [10, 20];
 ```
+
+### 特定文字の数え上げ
+- String オブジェクトの match() メソッドは、マッチした文字列を配列で返す
+  -  引数は正規表現で指定する
+```js
+var ex = /text/g
+var arr = str.match(ex);
+```
