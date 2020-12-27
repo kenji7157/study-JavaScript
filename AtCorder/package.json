@@ -1,0 +1,16 @@
+{
+  "name": "atcorder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**/*.js' --config .eslintrc.js --fix"
+  },
+  "author": "Kenji Kawanobe <kawake.kk@gmail.com> (https://github.com/kenji7157)",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-plugin-prettier": "^3.3.0"
+  }
+}
