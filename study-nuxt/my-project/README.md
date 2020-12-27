@@ -20,6 +20,7 @@ $ npm run generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## プロジェクトの作成 
+```
 -> % npx create-nuxt-app my-project
 
 create-nuxt-app v3.4.0
@@ -36,3 +37,4 @@ create-nuxt-app v3.4.0
 ? Development tools: jsconfig.json (Recommended for VS Code if you're not using typescript)
 ? Continuous integration: None
 ? Version control system: Git
+```
