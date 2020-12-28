@@ -22,7 +22,8 @@ module.exports = {
   // npmのパッケージ名を配列に追加する グローバルに使用できるモジュールとなる
   //  -> 各コンポーネントでimportが不要となる
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/dotenv'
   ],
   axios: {
 
