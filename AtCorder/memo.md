@@ -57,4 +57,12 @@ function f() {
 
 
 ### 等差数列の和
-Sn = n * ( a[初項] + l[末項] )/ 2
+```js
+let Sn = n * ( a[初項] + l[末項] )/ 2
+```
+
+### 絶対値の取得
+- Math.abs([number])
+
+### 平方根の取得
+- Math.sqrt([number])
