@@ -17,6 +17,14 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  // npmのパッケージ名を配列に追加する グローバルに使用できるモジュールとなる
+  //  -> 各コンポーネントでimportが不要となる
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  axios: {
+
+  },
   /*
   ** Build configuration
   */
