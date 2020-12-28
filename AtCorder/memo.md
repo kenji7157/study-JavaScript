@@ -19,6 +19,13 @@ var min_val = Math.min(...list);
 let [a, b] = [10, 20];
 ```
 
+### 配列の合計値
+```js
+let sum = list.reduce((a, b) => {
+      return a + b;
+    })
+```
+
 ### 特定文字の数え上げ
 - String オブジェクトの match() メソッドは、マッチした文字列を配列で返す
   -  引数は正規表現で指定する
