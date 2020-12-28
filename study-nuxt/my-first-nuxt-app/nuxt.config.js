@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   /*
   ** Headers of the page
@@ -24,6 +26,14 @@ module.exports = {
   ],
   axios: {
 
+  },
+  plugins: [
+    '~/plugins/axios.js'
+  ],
+  // 環境変数は.envファイルから参照
+  // 参考記事： https://qiita.com/fj_yohei/items/c77bff6f0177b4ff219e
+  env: {
+    QIITA_TOKEN: process.env.QIITA_TOKEN
   },
   /*
   ** Build configuration
