@@ -22,13 +22,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  async asyncData({ route, app }) {
-    const user = await app.$axios.$get(`https://qiita.com/api/v2/users/${route.params.id}`);
-    const items =  
-      await app.$axios.$get(`https://qiita.com/api/v2/items?query=user:${route.params.id}`);
-    return {
-      user, items
+  async asyncData({ store, route, redirect }) {
+    if (store.getters['users'][route.params.id]) {
+      return
+    }
+    try {
+      await store.dispatch('fetchUserInfo', { id: route.params.id })
+    } catch(e) {
+      redirect('/')
     }
   },
   // ユーザごとのページタイトルを設定
@@ -36,6 +40,16 @@ export default {
     return {
       title: this.user.id
     }
+  },
+  computed: {
+    ...mapGetters(['users', 'userItems']),
+    user() {
+      return this.users[this.$route.params.id]
+    },
+    items() {
+      return this.userItems[this.$route.params.id] || []
+    }
+
   }
 }
 </script>
