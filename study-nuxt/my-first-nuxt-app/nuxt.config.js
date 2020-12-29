@@ -30,7 +30,8 @@ module.exports = {
 
   },
   plugins: [
-    '~/plugins/axios.js'
+    '~/plugins/axios.js',
+    '~/plugins/logger.js'
   ],
   // 環境変数は.envファイルから参照
   // 参考記事： https://qiita.com/fj_yohei/items/c77bff6f0177b4ff219e
