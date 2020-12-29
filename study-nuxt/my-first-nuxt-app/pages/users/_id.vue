@@ -30,6 +30,12 @@ export default {
     return {
       user, items
     }
+  },
+  // ユーザごとのページタイトルを設定
+  head() {
+    return {
+      title: this.user.id
+    }
   }
 }
 </script>
