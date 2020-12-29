@@ -4,6 +4,7 @@
     <AppNavigation></AppNavigation>
     <hr>
     <nuxt/>
+    <nuxt-link to="/">トップへ戻る</nuxt-link>
     <hr>
     <footer>
       footer
