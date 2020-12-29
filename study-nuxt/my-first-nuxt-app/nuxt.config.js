@@ -37,6 +37,13 @@ module.exports = {
   env: {
     QIITA_TOKEN: process.env.QIITA_TOKEN
   },
+  // ミドルウェアの登録
+  router: {
+    // auth.jsをグローバルフックとして登録
+    middleware: [
+      'auth'
+    ]
+  },
   /*
   ** Build configuration
   */
