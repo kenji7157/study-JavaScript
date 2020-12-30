@@ -37,11 +37,15 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'https://nuxt-kk-sample.firebaseio.com',
+    baseURL: 'https://nuxt-kk-sample-default-rtdb.firebaseio.com',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: [/^element-ui/],
+  },
+
+  router: {
+    middleware: ['auth-cookie'],
   },
 }

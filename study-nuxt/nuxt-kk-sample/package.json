@@ -13,8 +13,7 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.{js,vue}": "eslint"
   },
   "husky": {
     "hooks": {
@@ -25,7 +24,8 @@
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
