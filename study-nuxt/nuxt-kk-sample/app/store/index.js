@@ -23,7 +23,7 @@ export const actions = {
   },
   async register({ commit }, { id }) {
     const alreadyUser = await this.$axios.$get(`/users/${id}.json`)
-    if (alreadyUser.id) throw new Error('already exist')
+    if (alreadyUser && alreadyUser.id) throw new Error('already exist')
     const payload = {}
     payload[id] = { id }
     await this.$axios.$patch(`/users.json`, payload)
