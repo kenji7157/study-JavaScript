@@ -68,8 +68,12 @@ function f() {
 let Sn = n * ( a[初項] + l[末項] )/ 2
 ```
 
-## Mathモジュールの利用
+### Mathモジュールの利用
 - 絶対値の取得
   - Math.abs([number])
 - 平方根の取得
   - Math.sqrt([number])
+
+### String.prototype.trim()
+- trim() メソッドは、文字列の両端の空白を削除する
+  - 数値のときはparseIntで空白削除を考慮するが、文字列の場合はtrimを意識しないと誤爆する
