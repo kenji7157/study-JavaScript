@@ -8,7 +8,7 @@
         :data="showPosts"
         style="width: 100%"
         class="table"
-        @click="handleClick"
+        @row-click="handleClick"
       >
         <el-table-column prop="title" label="タイトル"></el-table-column>
         <el-table-column
@@ -32,7 +32,7 @@ import moment from '~/plugins/moment'
 
 export default {
   async asyncData({ store }) {
-    await store.dispatch('fetchPosts')
+    await store.dispatch('posts/fetchPosts')
   },
   computed: {
     ...mapGetters('posts', ['posts']),
