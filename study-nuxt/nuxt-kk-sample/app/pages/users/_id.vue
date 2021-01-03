@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <el-row v-if="user"
-      ><el-col :span="6"
-        ><el-card class="text-center" style="margin-right: 16px">
+  <section class="container">
+    <el-row v-if="user">
+      <el-col :span="6">
+        <el-card class="text-center" style="margin-right: 16px">
           <div>
             <img
               src="https://placehold.it/150x150"
@@ -22,13 +22,13 @@
           </div>
           <el-table :data="userPosts" style="width: 100%" class="table">
             <el-table-column prop="title" label="タイトル"> </el-table-column>
-            <el-table-column prop="created_at" label="投稿日時" width="160">
+            <el-table-column prop="created_at" label="投稿日時" width="200">
             </el-table-column>
           </el-table>
         </el-card>
       </el-col>
     </el-row>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -69,9 +69,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.posts-page .el-table__row {
-  cursor: pointer;
-}
-</style>
