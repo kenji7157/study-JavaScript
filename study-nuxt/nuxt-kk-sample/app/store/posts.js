@@ -23,8 +23,8 @@ export const mutations = {
 
 export const actions = {
   async fetchPost({ commit }, { id }) {
-    const posts = await this.$axios.$get(`/posts/${id}.json`)
-    commit('addPost', { posts: { ...posts, id } })
+    const post = await this.$axios.$get(`/posts/${id}.json`)
+    commit('addPost', { post: { ...post, id } })
   },
   async fetchPosts({ commit }) {
     const posts = await this.$axios.$get(`/posts.json`)

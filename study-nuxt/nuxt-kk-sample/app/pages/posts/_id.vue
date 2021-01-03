@@ -1,7 +1,7 @@
 <template>
   <section class="container posts-page">
     <div style="flex: 1">
-      <el-card v-id="post">
+      <el-card v-if="post">
         <div slot="header" class="clearfix">
           <h2>{{ post.title }}</h2>
           <small>by {{ post.user.id }}</small>
@@ -32,7 +32,7 @@ export default {
       return
     }
     try {
-      await store.dispatch('posts/fetchPost', id)
+      await store.dispatch('posts/fetchPost', { id })
       if (!store.getters['posts/posts'].find((p) => p.id === id)) {
         throw new Error('post not found')
       }
