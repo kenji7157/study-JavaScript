@@ -4,13 +4,20 @@
 - Number：数値文字列をnumber型に変換する(小数も可能)
 - parseInt：文字列から整数部分の数値部分を取り出しnumber型に変換する(小数は不可)
 
-### 配列から最小値を抽出
+### 配列から最大値を抽出
 - スプレット構文
 - Mathモジュールを用いる
+- Number型にしか適用できない
+- BigIntの場合はreduceして最大値を取得する
 
 ```js
-/// listは配列
-var min_val = Math.min(...list);
+// listは配列
+var max_val = Math.max(...list);
+
+// BigIntの場合
+var max_val_bigint = list.reduce((a, b) => {
+  return a > b ? a : b;
+})
 ```
 
 ###　配列の分割代入
@@ -77,3 +84,27 @@ let Sn = n * ( a[初項] + l[末項] )/ 2
 ### String.prototype.trim()
 - trim() メソッドは、文字列の両端の空白を削除する
   - 数値のときはparseIntで空白削除を考慮するが、文字列の場合はtrimを意識しないと誤爆する
+
+### BigInt
+- 組み込みオブジェクト
+- Number.MAX_SAFE_INTEGER よりも大きな数値を信頼できるものとして表現する方法を提供
+
+```js
+const alsoHuge = BigInt(9007199254740991);
+// ↪ 9007199254740991n
+```
+
+### reduce
+- 配列データの各要素を累積して一つの値にする関数
+- 構文：.reduce(function(累積値, 要素) { })
+
+```js
+var numbers = [1,2,3,4,5,6,7,8,9];
+var result = numbers.reduce(function(a, b) {
+ 
+  return a + b;
+ 
+})
+// 45が出力される
+console.log(result);
+```
