@@ -80,6 +80,8 @@ let Sn = n * ( a[初項] + l[末項] )/ 2
   - Math.abs([number])
 - 平方根の取得
   - Math.sqrt([number])
+- 切り上げ
+  - Math.ceil([number])
 
 ### String.prototype.trim()
 - trim() メソッドは、文字列の両端の空白を削除する
